@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="{{mix('css/app.css')}}">
     <title>@yield('title','Weibo App y') - 由 Luis 制作的weibo</title>
 </head>
 <body>
