@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Str;
 
+$db_config = get_db_config();
+
 return [
 
     /*
@@ -32,6 +34,7 @@ return [
     | choice installed on your machine before you begin development.
     |
     */
+    'default' => $db_config['connection'],
 
     'connections' => [
 
