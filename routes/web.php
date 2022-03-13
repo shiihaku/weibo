@@ -10,4 +10,4 @@ Route::resource('users', 'UsersController');
 // 登陆部分路由
 Route::get('login', 'SessionsController@create')->name('login');
 Route::get('lgoin', 'SessionsController@store')->name('login');
-Route::delete('login', 'SessionsController@destory')->name('logout');
+Route::delete('logout', 'SessionsController@destroy')->name('logout');

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 use Auth;
 
@@ -27,7 +28,12 @@ class SessionsController extends Controller
             session()->flash('danger', 'Sorry,email or password is incorrect!');
             return redirect()->back()->withInput();
         }
+    }
 
-
+    public function destroy()
+    {
+        Auth::logout();
+        session()->flash('success', '已暂时离开');
+        return redirect('login');
     }
 }
